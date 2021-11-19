@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="@dimen/dp_60"
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_180"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo" />
+
+        <ImageView
+            android:id="@+id/ivIntro"
+            android:layout_weight="1"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/dp_100"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:src="@drawable/ic_intro" />
+
+        <TextView
+            android:id="@+id/tvTitleIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:gravity="center_horizontal"
+            android:text="Tối giản - thiết thực"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ivDesIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center_horizontal"
+            android:text="Ứng dụng trợ giúp chủ cửa hàng nhỏ, lẻ dễ dàng quản lý tất cả sản phẩm trong cửa hàng của mình."
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_17" />
+
+        <ImageView
+            android:id="@+id/ivNextIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@android:color/transparent"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/dp_30"
+            android:src="@drawable/ic_next_main" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quản lý cửa hàng</string>
+    <string name="message_share_app">Get more Famos at: %s</string>
+    <string name="message_empty">""</string>
+</resources>

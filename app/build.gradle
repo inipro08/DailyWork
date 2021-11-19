@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.inis.famo"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        def BASE_URL = "https://raw.githubusercontent.com/"
+        def SHARE_APP_URL = "https://play.google.com/store/apps/details?id="
+        def INAPP_SUB_01 = "inapp_key_sub_01"
+        def INAPP_SUB_02 = "inapp_key_sub_02"
+        def INAPP_SUB_03 = "inapp_key_sub_03"
+        def INAPP_SUB_04 = "inapp_key_sub_04"
+        def INAPP_LIFETIME = "inapp_key_life_time"
+        def ADMOB_INTERSTITIAL_ID = ""
+        def ADMOB_NATIVE_ID = ""
+        def ADMOB_BANNER_ID = ""
+        def ADMOB_REWARD_ID = ""
+        def BASE_URL_ICON = "https://raw.githubusercontent.com/matstickerdata/sticker/master/Images/"
+
+
+        if (variant.getName().contains("debug")) {
+            ADMOB_INTERSTITIAL_ID = "ca-app-pub-3940256099942544/1033173712"
+            ADMOB_NATIVE_ID = "ca-app-pub-3940256099942544/2247696110"
+            ADMOB_BANNER_ID = "ca-app-pub-3940256099942544/6300978111"
+            ADMOB_REWARD_ID = "ca-app-pub-3940256099942544/5224354917"
+
+        } else if (variant.getName().contains("release")) {
+
+        }
+        variant.buildConfigField "String", "SHARE_APP_URL", "\"${SHARE_APP_URL}\""
+        variant.buildConfigField "String", "BASE_URL", "\"${BASE_URL}\""
+        variant.buildConfigField "String", "INAPP_SUB_01", "\"${INAPP_SUB_01}\""
+        variant.buildConfigField "String", "INAPP_SUB_02", "\"${INAPP_SUB_02}\""
+        variant.buildConfigField "String", "INAPP_SUB_03", "\"${INAPP_SUB_03}\""
+        variant.buildConfigField "String", "INAPP_SUB_04", "\"${INAPP_SUB_04}\""
+        variant.buildConfigField "String", "INAPP_LIFETIME", "\"${INAPP_LIFETIME}\""
+        variant.buildConfigField "String", "ADMOB_INTERSTITIAL_ID", "\"${ADMOB_INTERSTITIAL_ID}\""
+        variant.buildConfigField "String", "ADMOB_NATIVE_ID", "\"${ADMOB_NATIVE_ID}\""
+        variant.buildConfigField "String", "ADMOB_BANNER_ID", "\"${ADMOB_BANNER_ID}\""
+        variant.buildConfigField "String", "ADMOB_REWARD_ID", "\"${ADMOB_REWARD_ID}\""
+        variant.buildConfigField "String", "BASE_URL_ICON", "\"${BASE_URL_ICON}\""
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // RxKotlin
+    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    // Retrofit2
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
+
+    // OkHttp3
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    //Room
+    implementation 'androidx.room:room-rxjava2:2.3.0-beta01'
+    implementation "androidx.room:room-runtime:2.2.6"
+    kapt "androidx.room:room-compiler:2.3.0-beta01"
+
+    //loading
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+}
