@@ -2,35 +2,41 @@ package com.inis.famo.ui.screen.activity.intro
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
-import android.widget.ImageView
 import com.inis.famo.R
+import com.inis.famo.databinding.ActivityIntroBinding
 import com.inis.famo.ui.base.BaseActivity
 import com.inis.famo.ui.screen.activity.main.MainActivity
+import top.wefor.circularanim.CircularAnim
 
-class IntroActivity : BaseActivity(R.layout.activity_intro) {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        findViewById<ImageView>(R.id.ivNextIntro).setOnClickListener {
-            nextHomeScreen()
-        }
-    }
-
-    private fun nextHomeScreen() {
-        startActivity(MainActivity.intent(context = this))
-        finish()
-    }
-
-    override fun onBackPressed() {
-
-    }
+class IntroActivity : BaseActivity<ActivityIntroBinding, IntroViewModel>(R.layout.activity_intro) {
 
     companion object {
         @JvmStatic
         fun intent(context: Context): Intent {
             return Intent(context, IntroActivity::class.java)
         }
+    }
+
+    override fun viewModelClass() = IntroViewModel::class.java
+
+    override fun ActivityIntroBinding.initView() {
+
+    }
+
+    override fun ActivityIntroBinding.addEvent() {
+       ivNextIntro.setOnClickListener {
+           CircularAnim.fullActivity(this@IntroActivity,ivNextIntro)
+               .colorOrImageRes(R.color.color_general)
+               .duration(350)
+               .go { nextHomeScreen() }
+       }
+    }
+
+    override fun IntroViewModel.observeLiveData() {
+    }
+
+    private fun nextHomeScreen() {
+        startActivity(MainActivity.intent(context = this))
+        finish()
     }
 }

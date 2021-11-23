@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="HomeBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.inis.famo.ui.screen.fragment.home.HomeViewModel" />
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_detail_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:minHeight="@dimen/dp_100"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+                app:contentScrim="@color/white"
+                app:expandedTitleMarginBottom="@dimen/dp_50"
+                app:expandedTitleMarginStart="@dimen/dp_16"
+                app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:statusBarScrim="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="false">
+
+                    <TextView
+                        android:id="@+id/tvHomeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:text="Chào Đạt Phạm"
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvHomeContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="Chúc bạn quản lý cửa hàng hiệu quả!"
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintStart_toStartOf="@id/tvHomeTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvHomeTitle" />
+
+                    <ImageView
+                        android:id="@+id/ivHomeCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/ic_cart"
+                        app:layout_constraintBottom_toBottomOf="@id/tvHomeTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvHomeTitle" />
+
+                    <com.inis.famo.widget.CustomSearchView
+                        android:id="@+id/home_search"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toStartOf="@id/ivHomeFilter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHomeContent"
+                        app:placeholder="Nhập từ khóa"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/ivHomeFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/ic_filter"
+                        app:layout_constraintBottom_toBottomOf="@id/home_search"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/home_search"
+                        app:layout_constraintTop_toTopOf="@id/home_search" />
+
+
+                    <TextView
+                        android:id="@+id/tvHomeHotBuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="Sản phẩm bán chạy"
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/home_search"
+                        app:layout_constraintTop_toBottomOf="@id/home_search" />
+
+                    <TextView
+                        android:id="@+id/tvHomeViewAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:drawableEnd="@drawable/ic_arrow_right"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="@dimen/dp_5"
+                        android:text="Xem tất cả"
+                        android:textSize="@dimen/sp_15"
+                        app:layout_constraintBottom_toBottomOf="@id/tvHomeHotBuy"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvHomeHotBuy" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvHomeHotBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintStart_toStartOf="@id/tvHomeHotBuy"
+                        app:layout_constraintTop_toBottomOf="@id/tvHomeHotBuy"
+                        tools:listitem="@layout/item_home_hot_buy" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_5"
+                android:visibility="visible"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rcvHomeHotBuy">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    android:tabStripEnabled="false"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabGravity="fill"
+                    app:tabIndicator="@drawable/ic_tab_indicator"
+                    app:tabIndicatorColor="@color/splash_loading"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMaxWidth="0dp"
+                    app:tabMinWidth="@dimen/dp_56"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/splash_loading"
+                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                    app:tabTextColor="@color/text2" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/homeViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tabProduct" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

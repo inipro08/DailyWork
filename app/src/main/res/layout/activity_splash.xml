@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.inis.famo.ui.screen.activity.splash.SplashViewModel" />
     </data>
 
     <LinearLayout

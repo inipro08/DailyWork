@@ -31,11 +31,7 @@ abstract class BaseBottomSheet<ViewBinding : ViewDataBinding, ViewModel : BaseVi
         AndroidSupportInjection.inject(this)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, layoutRes, container, false)
         binding.initViews()
         binding.addEvents()

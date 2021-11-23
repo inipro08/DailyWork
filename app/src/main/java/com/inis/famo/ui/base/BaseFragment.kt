@@ -20,12 +20,19 @@ import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-abstract class BaseFragment<ViewBinding : ViewDataBinding, ViewModel : BaseViewModel>(@LayoutRes val layoutRes: Int) :
+abstract class BaseFragment<T : ViewDataBinding, M : BaseViewModel>(@LayoutRes val layoutRes: Int) :
     DaggerFragment(layoutRes) {
 
-    protected lateinit var binding: ViewBinding
+    protected lateinit var binding: T
+    protected lateinit var viewModel: M
 
-    abstract val viewModel: ViewModel
+    protected abstract fun viewModelClass(): Class<M>
+
+    protected abstract fun observeLiveData()
+
+    protected abstract fun T.initComponents()
+
+    protected abstract fun T.addEvent()
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -35,12 +42,9 @@ abstract class BaseFragment<ViewBinding : ViewDataBinding, ViewModel : BaseViewM
         AndroidSupportInjection.inject(this)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, layoutRes, container, false)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(viewModelClass())
         binding.run {
             initComponents()
             addEvent()
@@ -50,15 +54,6 @@ abstract class BaseFragment<ViewBinding : ViewDataBinding, ViewModel : BaseViewM
 
         return binding.root
     }
-
-    protected open fun observeLiveData() {
-
-    }
-
-    protected open fun ViewBinding.initComponents() {}
-
-    protected open fun ViewBinding.addEvent() {}
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

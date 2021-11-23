@@ -9,8 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#808080</color>
     <color name="gray50">#80808080</color>
+    <color name="progressbar_bg_tint">#EBECF0</color>
 
-    <color name="text1">#333333</color>
+    //app
+    <color name="color_general">#0FA958</color>
+
+    // text
+    <color name="text1">#5B5B5B</color>
     <color name="text2">#99333333</color>
     <color name="text3">#2D2D2D</color>
     <color name="viewLineColor">#4D333333</color>
@@ -23,6 +28,8 @@
     <color name="home_background">#252A48</color>
     <color name="home_item">#2D3357</color>
     <color name="home_text_color">#F8F9FA</color>
+
+    <color name="bg_item_hot_buy">#F4F4F4</color>
 
     //login
     <color name="login_background_bt">#F4F4F4</color>

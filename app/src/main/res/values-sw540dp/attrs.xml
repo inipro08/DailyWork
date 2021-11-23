@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="foreground_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="color" format="color" />
+        <attr name="alpha" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTaskInfoWidget">
+        <attr name="showDetail" format="boolean" />
+        <attr name="showLine" format="boolean" />
+        <attr name="showTextValue" format="boolean" />
+        <attr name="goneWhenEmpty" format="boolean" />
+        <attr name="iconSize" format="dimension" />
+        <attr name="placeholder" format="string" />
+        <attr name="iconLeft" format="reference" />
+        <attr name="showBorderWhenHaveValue" format="boolean" />
+        <attr name="changeIconActive" format="boolean"></attr>
+    </declare-styleable>
+</resources>

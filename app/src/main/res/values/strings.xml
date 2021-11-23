@@ -2,4 +2,11 @@
     <string name="app_name">Quản lý cửa hàng</string>
     <string name="message_share_app">Get more Famos at: %s</string>
     <string name="message_empty">""</string>
+
+    <!--Bottom navigation-->
+    <string name="bottom_bar_home">Trang chủ</string>
+    <string name="bottom_bar_warehouse">Kho hàng</string>
+    <string name="bottom_bar_history">Lịch sử</string>
+    <string name="bottom_bar_more">Mở rộng</string>
+
 </resources>

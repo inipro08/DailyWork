@@ -113,4 +113,20 @@ dependencies {
 
     //loading
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+
+    // event bus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // secure sensitive data but it require min-sdk = 23 (Android 6)
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+    // Swipe Refresh layout
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    // replace {x.y.z} with the latest version.
+    implementation "com.github.XunMengWinter:CircularAnim:0.4.6"
 }
