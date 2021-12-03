@@ -28,7 +28,7 @@ abstract class BaseFragment<T : ViewDataBinding, M : BaseViewModel>(@LayoutRes v
 
     protected abstract fun viewModelClass(): Class<M>
 
-    protected abstract fun observeLiveData()
+    protected abstract fun M.observeLiveData()
 
     protected abstract fun T.initComponents()
 
@@ -49,7 +49,7 @@ abstract class BaseFragment<T : ViewDataBinding, M : BaseViewModel>(@LayoutRes v
             initComponents()
             addEvent()
         }
-        observeLiveData()
+        viewModel.observeLiveData()
 
 
         return binding.root

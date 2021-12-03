@@ -1,11 +1,9 @@
 package com.inis.famo.ui.screen.fragment.warehouse
 
 import android.annotation.SuppressLint
-import androidx.lifecycle.ViewModelProvider
 import com.inis.famo.R
 import com.inis.famo.databinding.WareHouseBinding
 import com.inis.famo.ui.base.BaseFragment
-import com.inis.famo.ui.screen.fragment.notification.NotificationViewModel
 
 class WareHouseFragment :
     BaseFragment<WareHouseBinding, WareHouseViewModel>(R.layout.fragment_warehouse) {
@@ -23,7 +21,7 @@ class WareHouseFragment :
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun WareHouseViewModel.observeLiveData() {
 
     }
 

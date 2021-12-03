@@ -22,7 +22,7 @@ class NotificationFragment :
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun NotificationViewModel.observeLiveData() {
 
     }
 

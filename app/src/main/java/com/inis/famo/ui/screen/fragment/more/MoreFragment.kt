@@ -22,7 +22,7 @@ class MoreFragment : BaseFragment<MoreBinding, MoreViewModel>(R.layout.fragment_
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun MoreViewModel.observeLiveData() {
 
     }
 

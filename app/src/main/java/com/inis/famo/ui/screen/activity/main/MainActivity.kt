@@ -4,26 +4,32 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.viewpager.widget.ViewPager
 import com.inis.famo.R
 import com.inis.famo.databinding.ActivityMainBinding
+import com.inis.famo.ui.adapter.HomePagerAdapter
+import com.inis.famo.ui.adapter.MainPagerAdapter
 import com.inis.famo.ui.base.BaseActivity
+import com.inis.famo.ui.screen.activity.intro.IntroActivity
 import com.inis.famo.ui.screen.fragment.history.HistoryFragment
 import com.inis.famo.ui.screen.fragment.home.HomeFragment
 import com.inis.famo.ui.screen.fragment.more.MoreFragment
 import com.inis.famo.ui.screen.fragment.warehouse.WareHouseFragment
+import com.inis.famo.utils.onPageSelected
 import kotlinx.android.synthetic.main.activity_main.*
 import top.wefor.circularanim.CircularAnim
+import java.util.*
+import kotlin.concurrent.schedule
 
 class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>(R.layout.activity_main) {
-    private var homeFragment: HomeFragment? = null
+
+   /* private var homeFragment: HomeFragment? = null
     private var wareHouseFragment: WareHouseFragment? = null
     private var historyFragment: HistoryFragment? = null
-    private var moreFragment: MoreFragment? = null
+    private var moreFragment: MoreFragment? = null*/
 
-    private val TAB_HOME_TAG = "TAB_HOME"
-    private val TAB_WARE_HOUSE_TAG = "TAB_WARE_HOUSE"
-    private val TAB_HISTORY_TAG = "TAB_HISTORY"
-    private val TAB_MORE_TAG = "TAB_MORE"
+    private var mainPagerAdapter : MainPagerAdapter? = null
+    private var currentItem = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,24 +41,25 @@ class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>(R.layout.ac
     }
 
     private fun onTabMenuSelected(menu: MenuItem): Boolean {
-        return when (menu.itemId) {
+         when (menu.itemId) {
             R.id.tab_home -> {
-                openHomeFragment()
+               mainViewPaper.currentItem = 0
             }
             R.id.tab_warehouse -> {
-                openWareHouseFragment()
+                mainViewPaper.currentItem = 1
             }
             R.id.tab_history -> {
-                openHistoryFragment()
+                mainViewPaper.currentItem = 2
             }
             R.id.tab_more -> {
-                openMoreFragment()
+                mainViewPaper.currentItem = 3
             }
-            else -> false
         }
+
+        return true
     }
 
-    private fun openHomeFragment(): Boolean {
+    /*private fun openHomeFragment(): Boolean {
         if (homeFragment == null) homeFragment = HomeFragment()
         return replaceFragment(HomeFragment(), false)
     }
@@ -70,7 +77,7 @@ class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>(R.layout.ac
     private fun openMoreFragment(): Boolean {
         if (moreFragment == null) moreFragment = MoreFragment()
         return replaceFragment(MoreFragment(), false)
-    }
+    }*/
 
     override fun onBackPressed() {
         super.onBackPressed()
@@ -92,8 +99,30 @@ class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>(R.layout.ac
     }
 
     override fun ActivityMainBinding.initView() {
+        val listFragment = arrayListOf(HomeFragment(),WareHouseFragment(),HistoryFragment(),MoreFragment())
+
+        mainPagerAdapter = MainPagerAdapter(
+            fragmentManager = supportFragmentManager,
+            listFragment = listFragment
+        )
+
+        mainViewPaper.adapter = mainPagerAdapter
+        mainViewPaper.onPageSelected {
+            currentItem = it
+        }
+        mainViewPaper.offscreenPageLimit = listFragment.size
+
+        swipeContainer.setOnRefreshListener {
+            Timer("SHOW INTRO", false).schedule(1500) {
+                showLoading(isLoad = false)
+            }
+        }
     }
 
     override fun MainViewModel.observeLiveData() {
+    }
+
+    private fun showLoading(isLoad : Boolean){
+        binding.swipeContainer.isRefreshing = isLoad
     }
 }

@@ -2,16 +2,14 @@ package com.inis.famo.ui.screen.fragment.home.tab
 
 import android.annotation.SuppressLint
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
 import com.inis.famo.R
 import com.inis.famo.data.model.ProductEntity
 import com.inis.famo.databinding.TabBinding
 import com.inis.famo.ui.adapter.HomeProductAdapter
 import com.inis.famo.ui.base.BaseFragment
-import com.inis.famo.ui.screen.fragment.home.HomeViewModel
 
-class TabProductFragment(val listProduct: ArrayList<ProductEntity>)
-    : BaseFragment<TabBinding, TabViewModel>(R.layout.fragment_home_tab_product) {
+class TabProductFragment(val listProduct: ArrayList<ProductEntity>) :
+    BaseFragment<TabBinding, TabViewModel>(R.layout.fragment_home_tab_product) {
 
     companion object {
         const val TAG = "TabProductFragment"
@@ -34,7 +32,7 @@ class TabProductFragment(val listProduct: ArrayList<ProductEntity>)
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun TabViewModel.observeLiveData() {
 
     }
 

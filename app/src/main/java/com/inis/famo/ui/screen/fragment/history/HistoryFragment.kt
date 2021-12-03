@@ -20,7 +20,7 @@ class HistoryFragment : BaseFragment<HistoryBinding, HistoryViewModel>(R.layout.
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun HistoryViewModel.observeLiveData() {
 
     }
 

@@ -62,12 +62,6 @@ class HomeFragment : BaseFragment<HomeBinding, HomeViewModel>(R.layout.fragment_
         binding.homeViewPager.onPageSelected {
             currentItem = it
         }
-
-        binding.homeViewPager.addOnPageChangeListener(object : TabLayout.TabLayoutOnPageChangeListener(binding.tabProduct) {
-            override fun onPageScrollStateChanged(state: Int) {
-                binding.swipeContainer.isEnabled = state == ViewPager.SCROLL_STATE_IDLE
-            }
-        })
     }
 
     private fun onBestSellingClick(bestSelling: BestSellingEntity) {
@@ -75,7 +69,7 @@ class HomeFragment : BaseFragment<HomeBinding, HomeViewModel>(R.layout.fragment_
     }
 
     @SuppressLint("StringFormatMatches")
-    override fun observeLiveData() {
+    override fun HomeViewModel.observeLiveData() {
     }
 
     override fun HomeBinding.addEvent() {

@@ -151,61 +151,53 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_container"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_5"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvHomeHotBuy">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabProduct"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:focusableInTouchMode="false"
-                android:orientation="vertical"
-                android:paddingHorizontal="@dimen/dp_5"
-                android:visibility="visible"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="0dp"
+                android:tabStripEnabled="false"
+                app:layout_collapseMode="pin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcvHomeHotBuy">
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/ic_tab_indicator"
+                app:tabIndicatorColor="@color/splash_loading"
+                app:tabIndicatorFullWidth="false"
+                app:tabMaxWidth="0dp"
+                app:tabMinWidth="@dimen/dp_56"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/splash_loading"
+                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                app:tabTextColor="@color/text2" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:elevation="0dp"
-                    android:tabStripEnabled="false"
-                    app:layout_collapseMode="pin"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tabGravity="fill"
-                    app:tabIndicator="@drawable/ic_tab_indicator"
-                    app:tabIndicatorColor="@color/splash_loading"
-                    app:tabIndicatorFullWidth="false"
-                    app:tabMaxWidth="0dp"
-                    app:tabMinWidth="@dimen/dp_56"
-                    app:tabMode="scrollable"
-                    app:tabSelectedTextColor="@color/splash_loading"
-                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
-                    app:tabTextColor="@color/text2" />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/homeViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabProduct" />
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/homeViewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:focusableInTouchMode="false"
-                    android:paddingTop="@dimen/dp_10"
-                    android:paddingBottom="@dimen/dp_20"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tabProduct" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
