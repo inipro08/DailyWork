@@ -17,12 +17,15 @@
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/fragment_warehouse.xml" value="0.15888157894736843" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/item_locked.xml" value="0.2296195652173913" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/splash_activity.xml" value="0.12" />
+        <entry key="..\:/MMO/a/famo/app/src/main/res/layout/custom_item_more.xml" value="0.16317567567567567" />
+        <entry key="..\:/MMO/a/famo/app/src/main/res/layout/fragment_more.xml" value="0.16317567567567567" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/background_border_radius_2.xml" value="0.17190635451505018" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/bg_item_home_hot_buy.xml" value="0.2635897435897436" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/bg_search_view.xml" value="0.2635897435897436" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/bottom_navigation_background.xml" value="0.37222222222222223" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_filter.xml" value="0.24414715719063546" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_home.xml" value="0.37222222222222223" />
+        <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_language.xml" value="0.23333333333333334" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_more.xml" value="0.2168776371308017" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_tab_indicator.xml" value="0.17190635451505018" />
         <entry key="..\:/MMO/famo/app/src/main/res/drawable/ic_warehouse.xml" value="0.17190635451505018" />
@@ -30,7 +33,9 @@
         <entry key="..\:/MMO/famo/app/src/main/res/layout/activity_intro.xml" value="0.23614864864864865" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/activity_login.xml" value="0.16317567567567567" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/MMO/famo/app/src/main/res/layout/activity_product_detail.xml" value="0.176" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/activity_splash.xml" value="0.16317567567567567" />
+        <entry key="..\:/MMO/famo/app/src/main/res/layout/custom_item_more.xml" value="0.2" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/fragment_cart.xml" value="0.23614864864864865" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/fragment_history.xml" value="0.2064102564102564" />
         <entry key="..\:/MMO/famo/app/src/main/res/layout/fragment_home.xml" value="0.1" />

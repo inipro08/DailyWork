@@ -4,6 +4,7 @@ import com.inis.famo.ui.screen.activity.cart.CartActivity
 import com.inis.famo.ui.screen.activity.intro.IntroActivity
 import com.inis.famo.ui.screen.activity.login.LoginActivity
 import com.inis.famo.ui.screen.activity.main.MainActivity
+import com.inis.famo.ui.screen.activity.productdetail.ProductDetailActivity
 import com.inis.famo.ui.screen.activity.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -24,4 +25,7 @@ abstract class ActivityModule {
 
     @ContributesAndroidInjector(modules = [FragmentModule::class])
     abstract fun contributeCart() : CartActivity
+
+    @ContributesAndroidInjector(modules = [FragmentModule::class])
+    abstract fun contributeProductDetail() : ProductDetailActivity
 }

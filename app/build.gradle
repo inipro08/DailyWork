@@ -129,4 +129,7 @@ dependencies {
 
     // replace {x.y.z} with the latest version.
     implementation "com.github.XunMengWinter:CircularAnim:0.4.6"
+
+    // looping viewpaper
+    implementation 'com.kenilt.loopingviewpager:loopingviewpager:0.2.0'
 }

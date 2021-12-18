@@ -8,6 +8,7 @@ import com.inis.famo.ui.screen.activity.cart.CartViewModel
 import com.inis.famo.ui.screen.activity.intro.IntroViewModel
 import com.inis.famo.ui.screen.activity.login.LoginViewModel
 import com.inis.famo.ui.screen.activity.main.MainViewModel
+import com.inis.famo.ui.screen.activity.productdetail.ProductDetailViewModel
 import com.inis.famo.ui.screen.activity.splash.SplashViewModel
 import com.inis.famo.ui.screen.fragment.history.HistoryViewModel
 import com.inis.famo.ui.screen.fragment.home.HomeViewModel
@@ -78,4 +79,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(TabViewModel::class)
     abstract fun bindTabViewModel(tabViewModel: TabViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductDetailViewModel::class)
+    abstract fun bindPDViewModel(productDetailViewModel: ProductDetailViewModel) : ViewModel
 }

@@ -9,4 +9,10 @@
     <string name="bottom_bar_history">Lịch sử</string>
     <string name="bottom_bar_more">Mở rộng</string>
 
+    <!--More-->
+    <string name="row_1">Mua bản cao cấp</string>
+    <string name="row_2">Cài đặt ngôn ngữ</string>
+    <string name="row_3">Chọn giao diện</string>
+    <string name="row_4">Đăng xuất</string>
+
 </resources>

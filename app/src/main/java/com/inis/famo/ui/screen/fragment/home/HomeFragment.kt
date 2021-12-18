@@ -1,10 +1,7 @@
 package com.inis.famo.ui.screen.fragment.home
 
 import android.annotation.SuppressLint
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
+import android.util.Log
 import com.inis.famo.R
 import com.inis.famo.data.model.BestSellingEntity
 import com.inis.famo.databinding.HomeBinding
@@ -12,12 +9,15 @@ import com.inis.famo.ui.adapter.HomeBestSellingAdapter
 import com.inis.famo.ui.adapter.HomePagerAdapter
 import com.inis.famo.ui.base.BaseFragment
 import com.inis.famo.ui.screen.activity.cart.CartActivity
+import com.inis.famo.ui.screen.activity.productdetail.ProductDetailActivity
 import com.inis.famo.utils.AppHelper.Companion.prepareListBestSelling
 import com.inis.famo.utils.AppHelper.Companion.prepareListFragment
 import com.inis.famo.utils.AppHelper.Companion.prepareListPager
 import com.inis.famo.utils.AppHelper.Companion.prepareListTab
 import com.inis.famo.utils.onPageSelected
 import com.inis.famo.utils.showSnackMessage
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeFragment : BaseFragment<HomeBinding, HomeViewModel>(R.layout.fragment_home) {
 
@@ -65,7 +65,7 @@ class HomeFragment : BaseFragment<HomeBinding, HomeViewModel>(R.layout.fragment_
     }
 
     private fun onBestSellingClick(bestSelling: BestSellingEntity) {
-        Toast.makeText(context, bestSelling.product_name, Toast.LENGTH_SHORT).show()
+        startActivity(ProductDetailActivity.intent(context = requireContext()))
     }
 
     @SuppressLint("StringFormatMatches")

@@ -7,6 +7,7 @@ import com.inis.famo.data.model.ProductEntity
 import com.inis.famo.databinding.TabBinding
 import com.inis.famo.ui.adapter.HomeProductAdapter
 import com.inis.famo.ui.base.BaseFragment
+import com.inis.famo.ui.screen.activity.productdetail.ProductDetailActivity
 
 class TabProductFragment(val listProduct: ArrayList<ProductEntity>) :
     BaseFragment<TabBinding, TabViewModel>(R.layout.fragment_home_tab_product) {
@@ -41,11 +42,7 @@ class TabProductFragment(val listProduct: ArrayList<ProductEntity>) :
     }
 
     private fun onProductClickDetail(productEntity: ProductEntity) {
-        Toast.makeText(
-            requireContext(),
-            "Product is ${productEntity.product_name}",
-            Toast.LENGTH_SHORT
-        ).show()
+        startActivity(ProductDetailActivity.intent(context = requireContext()))
     }
 
     private fun onFavoritesClick(productEntity: ProductEntity) {
