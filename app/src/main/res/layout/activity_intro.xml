@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.inis.famo.ui.screen.activity.intro.IntroViewModel" />
+            type="com.inis.dailywork.ui.screen.activity.intro.IntroViewModel" />
     </data>
 
     <LinearLayout

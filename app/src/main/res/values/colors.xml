@@ -35,4 +35,8 @@
 
     //login
     <color name="login_background_bt">#F4F4F4</color>
+
+
+    // warehouse
+    <color name="child_title_color">#686363</color>
 </resources>

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.inis.famo.ui.screen.activity.login.LoginViewModel" />
+            type="com.inis.dailywork.ui.screen.activity.login.LoginViewModel" />
     </data>
 
     <LinearLayout

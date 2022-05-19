@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.inis.famo.ui.screen.activity.main.MainViewModel" />
+            type="com.inis.dailywork.ui.screen.activity.main.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -14,32 +14,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <FrameLayout
-                android:id="@+id/container_main_activity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/mainViewPaper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </FrameLayout>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigation"
-            style="@style/Widget.MaterialComponents.BottomAppBar"
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_navigation_background"
-            android:elevation="@dimen/dp_8"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_navigation" />
+            android:background="@color/color_general"
+            app:textColorSelected="#FFFF" />
+
+        <com.inis.dailywork.widget.timelineview.TimelineView
+            android:id="@+id/timeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lineColor="@color/color_general"
+            app:lineOrientation="vertical"
+            app:lineSize="4dp"
+            app:markerActive="false"
+            app:markerActiveColor="@color/color_general"
+            app:markerActiveStrokeWidth="8dp"
+            app:markerColor="@color/color_general"
+            app:markerSize="20dp"
+            app:markerStrokeWidth="2dp"
+            app:markerTextColor="@android:color/white"
+            app:markerTextSize="10sp"/>
 
     </LinearLayout>
 </layout>

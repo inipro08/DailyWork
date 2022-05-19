@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.LockMyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MVVM" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/splash_loading</item>
         <item name="colorPrimaryVariant">@color/home_background</item>
@@ -18,7 +18,7 @@
 
     <style name="base">
         <item name="android:ellipsize">end</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/san_regular</item>
     </style>
 
     <style name="custom.text.group" parent="base">
@@ -30,7 +30,7 @@
         <item name="android:textColor">@color/text2</item>
         <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/dp_10</item>
         <item name="android:textSize">@dimen/sp_18</item>
-        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/san_semibold</item>
     </style>
 
     <style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline5">

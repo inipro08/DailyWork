@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.inis.famo">
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.inis.dailywork">
+
+    <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.inis.famo.MainApplication"
+        android:name="com.inis.dailywork.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LockMyApp">
+        android:theme="@style/Theme.MVVM">
         <activity
-            android:name=".ui.screen.activity.splash.SplashActivity"
+            android:name="com.inis.dailywork.ui.screen.activity.main.MainActivity"
+            android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,27 +28,12 @@
         </activity>
 
         <activity
-            android:name=".ui.screen.activity.intro.IntroActivity"
+            android:name="com.inis.dailywork.ui.screen.activity.intro.IntroActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.screen.activity.main.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.screen.activity.login.LoginActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.screen.activity.cart.CartActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.screen.activity.productdetail.ProductDetailActivity"
+            android:name="com.inis.dailywork.ui.screen.activity.login.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
     </application>

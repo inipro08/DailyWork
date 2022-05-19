@@ -1,18 +1,12 @@
 <resources>
-    <string name="app_name">Quản lý cửa hàng</string>
-    <string name="message_share_app">Get more Famos at: %s</string>
+    <string name="app_name">Daily Work</string>
+    <string name="message_share_app">Get more MVVM at: %s</string>
     <string name="message_empty">""</string>
 
     <!--Bottom navigation-->
     <string name="bottom_bar_home">Trang chủ</string>
-    <string name="bottom_bar_warehouse">Kho hàng</string>
-    <string name="bottom_bar_history">Lịch sử</string>
-    <string name="bottom_bar_more">Mở rộng</string>
-
-    <!--More-->
-    <string name="row_1">Mua bản cao cấp</string>
-    <string name="row_2">Cài đặt ngôn ngữ</string>
-    <string name="row_3">Chọn giao diện</string>
-    <string name="row_4">Đăng xuất</string>
+    <string name="bottom_bar_1">Kho hàng</string>
+    <string name="bottom_bar_2">Lịch sử</string>
+    <string name="bottom_bar_3">Mở rộng</string>
 
 </resources>
