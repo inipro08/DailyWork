@@ -1,2 +1,2 @@
-# famo
-Store Manager
+# Daily Work
+Todo List
