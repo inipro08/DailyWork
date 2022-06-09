@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 class AppPrefs @Inject constructor(val context: Context) : PrefHelper {
     companion object {
-        const val PREF_PREFIX_LOCKER = "famo_"
+        const val PREF_PREFIX_LOCKER = "daily_note_"
     }
 
     private var sharedPreferences = context.getSharedPreferences(context.packageName, Context.MODE_PRIVATE)
