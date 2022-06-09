@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.17300724637681159" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/bg_bt_login.xml" value="0.2338815789473684" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/ic_intro.xml" value="0.16742671009771987" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/ic_next_main.xml" value="0.23778501628664495" />
@@ -82,7 +83,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

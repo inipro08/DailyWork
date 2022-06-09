@@ -5,5 +5,6 @@ import java.io.Serializable
 data class NoteItem(
     val time: String = "",
     val title: String = "",
-    val content: String = ""
+    val content: String = "",
+    val
 ) : Serializable
