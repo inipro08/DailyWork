@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../layout/custom_preview.xml" value="0.17300724637681159" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/bg_bt_login.xml" value="0.2338815789473684" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/ic_intro.xml" value="0.16742671009771987" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/drawable/ic_next_main.xml" value="0.23778501628664495" />
@@ -18,7 +17,10 @@
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/fragment_warehouse.xml" value="0.15888157894736843" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/item_locked.xml" value="0.2296195652173913" />
         <entry key="..\:/Kiếm thêm/AndroidStudioProjects/Famo Store/app/src/main/res/layout/splash_activity.xml" value="0.12" />
+        <entry key="..\:/MMO/Daily Work/app/src/main/res/layout/activity_intro.xml" value="0.13614864864864865" />
         <entry key="..\:/MMO/Daily Work/app/src/main/res/layout/activity_main.xml" value="0.16216216216216217" />
+        <entry key="..\:/MMO/Daily Work/app/src/main/res/layout/item_card_note.xml" value="0.13614864864864865" />
+        <entry key="..\:/MMO/Daily Work/app/src/main/res/layout/item_note.xml" value="0.22" />
         <entry key="..\:/MMO/MVVM/app/src/main/res/layout/activity_main.xml" value="0.23513513513513515" />
         <entry key="..\:/MMO/MVVM/app/src/main/res/layout/fragment_home.xml" value="0.12533783783783783" />
         <entry key="..\:/MMO/a/famo/app/src/main/res/layout/custom_item_more.xml" value="0.16317567567567567" />
@@ -78,12 +80,10 @@
         <entry key="..\:/MVVM/app/src/main/res/layout/item_home_hot_buy.xml" value="0.23614864864864865" />
         <entry key="..\:/MVVM/app/src/main/res/layout/item_parent_ware_house.xml" value="0.16047297297297297" />
         <entry key="..\:/MVVM/app/src/main/res/menu/bottom_navigation.xml" value="0.1341216216216216" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.27803521779425394" />
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
