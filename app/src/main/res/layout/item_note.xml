@@ -11,14 +11,15 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/containerStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tvNoteTime"
@@ -30,20 +31,27 @@
 
             <ImageView
                 android:id="@+id/ivNoteStatus"
-                android:layout_marginHorizontal="@dimen/dp_10"
                 android:layout_width="@dimen/dp_25"
                 android:layout_height="@dimen/dp_25"
-                android:src="@drawable/ic_radio_create" />
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:src="@drawable/ic_radio_create"
+                app:tint="@color/gray" />
 
             <include layout="@layout/item_card_note" />
 
         </LinearLayout>
-            <View
-                android:layout_marginStart="@dimen/dp_70"
-                android:id="@+id/viewLine"
-                android:layout_width="@dimen/dp_3"
-                android:layout_height="match_parent"
-                android:background="@color/gray"/>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginStart="@dimen/dp_70"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerStatus" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
