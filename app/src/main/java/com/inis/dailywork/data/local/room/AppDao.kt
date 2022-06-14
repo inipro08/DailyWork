@@ -1,17 +1,18 @@
 package com.inis.dailywork.data.local.room
 
 import androidx.room.*
+import com.inis.dailywork.data.model.TodoItem
 import io.reactivex.Observable
 
 @Dao
 interface AppDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(track: Track)
+    fun insert(track: TodoItem)
 
     @Delete
-    fun delete(track: Track)
+    fun delete(track: TodoItem)
 
-    @Query("SELECT * FROM tracks")
-    fun getAllFavorites(): Observable<List<Track>>
+    @Query("SELECT * FROM todo")
+    fun getAllFavorites(): Observable<List<TodoItem>>
 }
