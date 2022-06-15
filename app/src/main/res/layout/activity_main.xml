@@ -9,7 +9,7 @@
             type="com.inis.dailywork.ui.screen.activity.main.MainViewModel" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -19,12 +19,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_general"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:textColorSelected="#FFFF" />
 
         <com.inis.dailywork.widget.timelineview.TimelineView
             android:id="@+id/timeline"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calendarView"
             app:lineColor="@color/color_general"
             app:lineOrientation="vertical"
             app:lineSize="4dp"
@@ -35,7 +41,18 @@
             app:markerSize="20dp"
             app:markerStrokeWidth="2dp"
             app:markerTextColor="@android:color/white"
-            app:markerTextSize="10sp"/>
+            app:markerTextSize="10sp" />
 
-    </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="da"
+            android:src="@drawable/ic_add_work"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
