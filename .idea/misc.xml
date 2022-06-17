@@ -88,9 +88,17 @@
         <entry key="..\:/MVVM/app/src/main/res/layout/item_home_hot_buy.xml" value="0.23614864864864865" />
         <entry key="..\:/MVVM/app/src/main/res/layout/item_parent_ware_house.xml" value="0.16047297297297297" />
         <entry key="..\:/MVVM/app/src/main/res/menu/bottom_navigation.xml" value="0.1341216216216216" />
+        <entry key="app/src/main/res/drawable/bg_bt_login.xml" value="0.122" />
+        <entry key="app/src/main/res/drawable/ic_google.xml" value="0.122" />
+        <entry key="app/src/main/res/layout/activity_intro.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27803521779425394" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/item_card_note.xml" value="0.3" />
+        <entry key="app/src/main/res/layout/item_home_hot_buy.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.2890625" />
       </map>
     </option>
   </component>

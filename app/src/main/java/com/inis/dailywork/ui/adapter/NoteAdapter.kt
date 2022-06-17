@@ -16,7 +16,7 @@ class NoteAdapter : BaseRecyclerViewAdapter<TodoItem, ItemNoteBinding>(object :
         return oldItem == newItem
     }
 }) {
-    override val layoutRes = R.layout.item_note
+    override val layoutRes = R.layout.item_todo
 
     override fun bindData(itemBinding: ItemNoteBinding, position: Int) {
         super.bindData(itemBinding, position)

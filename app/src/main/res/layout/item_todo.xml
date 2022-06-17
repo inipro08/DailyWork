@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="item"
+            type="com.inis.dailywork.data.model.TodoItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +40,7 @@
                 android:src="@drawable/ic_radio_create"
                 app:tint="@color/gray" />
 
-            <include layout="@layout/item_card_note" />
+            <include layout="@layout/item_card_todo" />
 
         </LinearLayout>
 

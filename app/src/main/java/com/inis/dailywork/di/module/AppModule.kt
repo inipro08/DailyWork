@@ -6,8 +6,11 @@ import com.inis.dailywork.rx.AppSchedulerProvider
 import com.inis.dailywork.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
 @Module(includes = [ViewModelModule::class, NetworkModule::class, RepositoryModule::class])
 class AppModule {
 

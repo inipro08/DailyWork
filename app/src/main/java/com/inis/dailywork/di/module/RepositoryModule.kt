@@ -12,8 +12,11 @@ import com.inis.dailywork.data.repository.AppRepositoryImpl
 import com.inis.dailywork.utils.Constants
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
 @Module
 class RepositoryModule {
 

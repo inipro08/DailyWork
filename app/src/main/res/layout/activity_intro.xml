@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -56,14 +57,15 @@
 
         <ImageView
             android:id="@+id/ivNextIntro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/dp_50"
             android:background="@android:color/transparent"
             android:foreground="?selectableItemBackground"
-            android:padding="@dimen/dp_30"
-            android:src="@drawable/ic_next_main" />
+            android:layout_margin="@dimen/dp_30"
+            android:src="@drawable/ic_next_main"
+            app:tint="@color/gray" />
 
     </LinearLayout>
 </layout>
